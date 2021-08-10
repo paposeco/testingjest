@@ -12,3 +12,12 @@ test("new object from example array", () => {
 test("new object with non numbers", () => {
   expect(arrayToObject([1, "a", 3, 4, 2, 6])).toMatch("Error");
 });
+
+test("new object from example array", () => {
+  expect(arrayToObject([0, 0, 0])).toMatchObject({
+    average: 0,
+    min: 0,
+    max: 0,
+    length: 3,
+  });
+});
